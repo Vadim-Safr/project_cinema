@@ -1,6 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #621402;
     font-family: "Roboto", sans-serif;
+    color: white;
 }
 
 .container {
@@ -9,6 +14,11 @@ body {
 }
 
 .header {
+    min-height: 100vh;
+    background:  linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), url('../img/bg.jpg') no-repeat center top / cover;
+}
+
+.navbar {
     display: flex;
     align-items: center;
     padding-block: 30px;
@@ -23,13 +33,12 @@ body {
 }
 
 .menu-link {
-    color: white;
+    color: inherit;
     text-decoration: none;
 }
 
 .user {
     margin-left: auto;
-    color: white;
     display: flex;
     align-items: center;
     column-gap: 11px;
@@ -39,4 +48,123 @@ body {
     width: 33px;
     height: 33px;
     border-radius: 50%;
+}
+
+.film {
+    display: flex;
+    align-items: center;
+    margin-block: 60px;
+}
+
+.film-title-small {
+    opacity: 50%;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+.film-title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-block: 11px 23px;
+}
+
+.film-description {   
+    font-size: 16px;
+    line-height: 150%;
+    max-width: 560px;
+}
+
+.film-trailer {
+    margin: auto;
+}
+
+.film-details {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    column-gap: 34px;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+}
+
+.rating-current {
+    font-size: 24px;
+    line-height: 150%;
+}
+
+.session {
+    padding-block: 46px 63px;
+    border-block: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.session-label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.session-date-block {
+    display: flex;
+    column-gap: 15px;
+}
+
+.session-date-item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    transition: all .3s;
+
+    &:hover {
+        background-color: #FE8E05;
+        color: #621402;
+    }
+}
+
+.session-month {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.session-day {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.session-week {
+    font-size: 19px;
+    line-height: 19px;
+}
+
+.select {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 18px;
+    color: white;
+    margin-block: 15px;
+}
+
+.select-cinema {
+    min-width: 470px;
 }
