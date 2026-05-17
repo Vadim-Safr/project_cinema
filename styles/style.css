@@ -168,3 +168,73 @@ body {
 .select-cinema {
     min-width: 470px;
 }
+
+.scheme {
+    background: rgba(36, 36, 36, 0.18);
+    border-radius: 10px;
+
+    & path:not(.light) {
+        fill: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        transition: fill .2s;
+
+        &:hover {
+            fill: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    & path.booked, path.booked:hover {
+        fill: rgba(255, 255, 255, 0.05);
+        cursor: not-allowed;
+    }
+
+    & path.active, path.active:hover {
+        fill: #fe8e05;
+    }
+}
+
+.legend {
+    max-width: 1024px;
+    margin: auto;
+    padding-block: 22px 38px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    column-gap: 30px;
+}
+
+.legend-label {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 65px;
+}
+
+.price-tag {
+    font-weight: 400;
+    font-size: 52px;
+}
+
+.price-label {
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.button {
+    background-color: #fe8e05;
+    padding: 24px 52px;
+    border-radius: 5px;
+    color: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration: none;
+}
